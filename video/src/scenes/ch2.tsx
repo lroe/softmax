@@ -360,10 +360,10 @@ export const WeakSpots: React.FC<SceneProps> = ({t0}) => {
         ))}
         <Label text="chances" x={1400} y={640} size={40} color={C.soft} start={0.75} />
         <FadeGroup start={noLoop - 0.1} fade={0.3}>
-          <SketchPath d="M 900 720 Q 780 790 660 720" start={0} dur={0.4} stroke={C.red} strokeWidth={3} seed={1420} />
-          <Head x={660} y={720} angle={-0.9} start={0.3} color={C.red} size={14} />
-          <SketchLine x1={700} y1={680} x2={650} y2={740} start={0.35} dur={0.2} stroke={C.red} strokeWidth={5} seed={1422} />
-          <SketchLine x1={650} y1={680} x2={700} y2={740} start={0.4} dur={0.2} stroke={C.red} strokeWidth={5} seed={1423} />
+          <SketchPath d="M 1050 690 Q 885 800 720 690" start={0} dur={0.5} stroke={C.red} strokeWidth={3.5} seed={1420} />
+          <Head x={720} y={690} angle={-2.32} start={0.42} color={C.red} size={16} />
+          <SketchLine x1={920} y1={700} x2={860} y2={760} start={0.5} dur={0.2} stroke={C.red} strokeWidth={5} seed={1422} />
+          <SketchLine x1={860} y1={700} x2={920} y2={760} start={0.55} dur={0.2} stroke={C.red} strokeWidth={5} seed={1423} />
         </FadeGroup>
       </FadeGroup>
     </Canvas>
