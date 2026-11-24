@@ -39,3 +39,16 @@ npm run studio
 
 - The meme captions are drawn by Remotion over the supplied meme templates, so the text stays crisp at 1080p.
 - `whisper_words.json` was produced with faster-whisper `small.en` on CPU. The script words were aligned to the audio with difflib, and gaps were interpolated.
+
+## 2K Colab render
+
+The notebook `render_2k_colab.ipynb` renders this project at **2560 × 1440** and writes resumable chunks, logs, stills, and the final MP4 to Google Drive.
+
+- Open it in Colab:
+  `https://colab.research.google.com/github/lroe/softmax/blob/main/render_2k_colab.ipynb`
+- The first Drive cell asks for Google Drive permission. Nothing is written to Drive before that.
+- Output folder: `MyDrive/SoftmaxGate2K/`
+- The renderer streams live frame counts, FPS, chunk number, and ETA.
+- Every 20-second chunk is synced to Drive; rerunning skips finished chunks.
+- `skill.md` is deliberately excluded from the repository.
+

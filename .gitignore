@@ -5,3 +5,5 @@ video/.cache/
 qa-frames/
 *.log
 .DS_Store
+
+skill.md
