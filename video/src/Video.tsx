@@ -41,6 +41,18 @@ export const MEMES = [
     ],
   },
   {
+    src: "memes/monkey.png",
+    w: 923,
+    h: 768,
+    start: 63.4,
+    end: 68.6,
+    maxW: 900,
+    maxH: 760,
+    captions: [
+      {x: 0.5, y: 0.115, w: 0.9, text: "softmax ... or the squeeze?", size: 46, color: "#17181e", stroke: false},
+    ],
+  },
+  {
     src: "memes/this-is-fine.png",
     w: 1160,
     h: 564,
@@ -49,6 +61,33 @@ export const MEMES = [
     maxW: 1320,
     maxH: 720,
     captions: [],
+  },
+  {
+    src: "memes/panik.png",
+    w: 640,
+    h: 881,
+    start: 348.0,
+    end: 353.6,
+    maxW: 580,
+    maxH: 800,
+    captions: [
+      {x: 0.2, y: 0.165, w: 0.34, text: "the model is sure", size: 34, color: "#17181e", stroke: false},
+      {x: 0.2, y: 0.5, w: 0.34, text: "loss is zero", size: 34, color: "#17181e", stroke: false},
+      {x: 0.2, y: 0.835, w: 0.34, text: "gradient is zero too", size: 34, color: "#17181e", stroke: false},
+    ],
+  },
+  {
+    src: "memes/batman.png",
+    w: 900,
+    h: 871,
+    start: 414.2,
+    end: 419.2,
+    maxW: 820,
+    maxH: 800,
+    captions: [
+      {x: 0.22, y: 0.1, w: 0.36, text: "the tiny error", size: 42},
+      {x: 0.8, y: 0.1, w: 0.3, text: "Adam", size: 42},
+    ],
   },
   {
     src: "memes/distracted.png",
@@ -62,6 +101,19 @@ export const MEMES = [
       {x: 0.2, y: 0.1, w: 0.36, text: "the rich thought", size: 52},
       {x: 0.52, y: 0.1, w: 0.32, text: "softmax", size: 52},
       {x: 0.83, y: 0.1, w: 0.3, text: "one word", size: 52},
+    ],
+  },
+  {
+    src: "memes/woman-cat.png",
+    w: 1220,
+    h: 786,
+    start: 646.9,
+    end: 652.2,
+    maxW: 1280,
+    maxH: 820,
+    captions: [
+      {x: 0.18, y: 0.1, w: 0.34, text: "text agents 32–39", size: 38},
+      {x: 0.78, y: 0.55, w: 0.3, text: "silent 3.9", size: 38},
     ],
   },
   {
@@ -90,6 +142,30 @@ export const MEMES = [
     ],
   },
   {
+    src: "memes/roll-safe.png",
+    w: 1200,
+    h: 675,
+    start: 807.0,
+    end: 812.2,
+    maxW: 1280,
+    maxH: 720,
+    captions: [
+      {x: 0.5, y: 0.92, w: 0.9, text: "silent step: p = 1", size: 48},
+    ],
+  },
+  {
+    src: "memes/absolute-cinema.png",
+    w: 1035,
+    h: 802,
+    start: 909.0,
+    end: 914.2,
+    maxW: 1200,
+    maxH: 800,
+    captions: [
+      {x: 0.5, y: 0.92, w: 0.8, text: "the thought is doing the work", size: 42},
+    ],
+  },
+  {
     src: "memes/two-buttons.png",
     w: 900,
     h: 1362,
@@ -103,6 +179,21 @@ export const MEMES = [
     ],
   },
   {
+    src: "memes/expanding-brain.png",
+    w: 857,
+    h: 1202,
+    start: 1089.4,
+    end: 1096.6,
+    maxW: 640,
+    maxH: 900,
+    captions: [
+      {x: 0.25, y: 0.155, w: 0.44, text: "write every thought", size: 34, color: "#17181e", stroke: false},
+      {x: 0.25, y: 0.405, w: 0.44, text: "summarize it", size: 34, color: "#17181e", stroke: false},
+      {x: 0.25, y: 0.655, w: 0.44, text: "think in latent", size: 34, color: "#17181e", stroke: false},
+      {x: 0.25, y: 0.905, w: 0.44, text: "say nothing", size: 34, color: "#17181e", stroke: false},
+    ],
+  },
+  {
     src: "memes/always-has-been.png",
     w: 1440,
     h: 810,
@@ -110,7 +201,10 @@ export const MEMES = [
     end: 1194.88,
     maxW: 1320,
     maxH: 760,
-    captions: [],
+    captions: [
+      {x: 0.36, y: 0.3, w: 0.5, text: "wait, it's all softmax?", size: 42},
+      {x: 0.76, y: 0.16, w: 0.42, text: "always has been.", size: 46},
+    ],
   },
 ];
 
