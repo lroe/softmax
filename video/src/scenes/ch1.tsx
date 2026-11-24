@@ -3,7 +3,7 @@ import {at} from "../timing";
 import {C} from "../theme";
 import {Canvas, FadeGroup, clamp01} from "../lib/scene";
 import {Arrow, Bracket, Head, Label, SketchCircle, SketchLine, SketchPath, SketchRect, Underline} from "../lib/Sketch";
-import {Gate, WordChip, useT, Cloud, SpeechBubble, HBar, VectorStrip} from "../lib/kit";
+import {Gate, WordChip, useT, Cloud, SpeechBubble, HBar, VectorStrip, Gauge} from "../lib/kit";
 
 export type SceneProps = {t0: number};
 
@@ -160,10 +160,20 @@ export const TheBug: React.FC<SceneProps> = ({t0}) => {
         <Label text="0" x={1260} y={654} size={96} color={C.red} align="left" start={zero} />
       </FadeGroup>
 
-      <FadeGroup start={sure - 0.4} fade={0.1}>
-        <Label text="99.9%" x={960} y={560} size={150} color={C.orange} start={0.05} font="Caveat" />
-        <SketchRect x={660} y={680} w={600} h={44} start={0.2} dur={0.3} stroke={C.line} fill={C.well} strokeWidth={2.4} radius={8} seed={330} />
-        <SketchRect x={660} y={680} w={596} h={44} start={0.3} dur={0.5} stroke={C.orange} fill={C.orange} strokeWidth={2} radius={8} seed={331} />
+      <FadeGroup start={sure - 0.35} end={S("lives in JAX") - 0.15} fade={0.2}>
+        <Gauge x={960} y={590} r={230} value={0.999} start={0.08} color={C.orange} valueText="99.9%" valueSize={92} seed={330} />
+        <Label text="sure" x={960} y={780} size={40} color={C.soft} start={0.35} />
+      </FadeGroup>
+
+      <FadeGroup start={S("lives in JAX") - 0.08} fade={0.18}>
+        {[
+          {t: "JAX", x: 460, w: 190, c: C.purple, p: "lives in JAX"},
+          {t: "PyTorch", x: 700, w: 250, c: C.orange, p: "PyTorch"},
+          {t: "TensorFlow", x: 1000, w: 300, c: C.yellow, p: "TensorFlow"},
+          {t: "textbooks", x: 1330, w: 270, c: C.cyan, p: "textbooks"},
+        ].map((n) => (
+          <WordChip key={n.t} text={n.t} x={n.x} y={540} w={n.w} h={84} start={S(n.p)} color={n.c} size={44} seed={335 + n.t.length} />
+        ))}
       </FadeGroup>
     </Canvas>
   );
@@ -219,9 +229,9 @@ export const SilentAgent: React.FC<SceneProps> = ({t0}) => {
       </FadeGroup>
 
       <FadeGroup start={S("half as many tokens") - 0.2} fade={0.35}>
-        <Label text="tokens" x={1010} y={782} size={36} color={C.soft} start={0} align="left" />
-        <HBar x={1110} y={790} w={420} value={100} label="normal" start={0} color={C.soft} valueText="100%" labelSize={40} seed={460} />
-        <HBar x={1110} y={880} w={420} value={50} label="silent" start={0.35} color={C.cyan} valueText="50%" labelSize={40} seed={462} />
+        <Label text="tokens" x={1100} y={300} size={44} color={C.soft} start={0} align="left" />
+        <HBar x={1100} y={370} w={470} value={100} label="normal" start={0} color={C.soft} valueText="100%" labelSize={46} seed={460} />
+        <HBar x={1100} y={510} w={470} value={50} label="silent" start={0.35} color={C.cyan} valueText="50%" labelSize={46} seed={462} />
       </FadeGroup>
     </Canvas>
   );

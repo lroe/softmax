@@ -465,8 +465,9 @@ export const Gauge: React.FC<{
   label?: string;
   valueText?: string;
   valueText2?: string;
+  valueSize?: number;
   seed?: number;
-}> = ({x, y, r = 180, value, value2, switchAt = 9999, start = 0, color = C.orange, color2, label, valueText, valueText2, seed = 900}) => {
+}> = ({x, y, r = 180, value, value2, switchAt = 9999, start = 0, color = C.orange, color2, label, valueText, valueText2, valueSize = 54, seed = 900}) => {
   const t = useT();
   const p = prog(t, start + 0.1, 0.6);
   const q = clamp01((t - switchAt) / 0.6);
@@ -481,7 +482,7 @@ export const Gauge: React.FC<{
       <SketchArc x={x} y={y} w={r * 2} h={r * 2} startAngle={Math.PI} stopAngle={Math.PI * 2} start={start} dur={0.6} stroke={C.line} strokeWidth={10} seed={seed} />
       <SketchLine x1={x} y1={y} x2={ex} y2={ey} start={start + 0.3} dur={0.4} stroke={c} strokeWidth={4.5} seed={seed + 1} />
       <SketchCircle x={x} y={y} d={20} start={start + 0.2} dur={0.2} stroke={c} fill={c} seed={seed + 2} />
-      {text ? <Label text={text} x={x} y={y + 62} size={54} color={c} start={start + 0.4} /> : null}
+      {text ? <Label text={text} x={x} y={y + 66} size={valueSize} color={c} start={start + 0.4} /> : null}
       {label ? <Label text={label} x={x} y={y + 122} size={40} color={C.soft} start={start + 0.5} /> : null}
     </g>
   );

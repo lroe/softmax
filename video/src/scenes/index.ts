@@ -17,7 +17,7 @@ export type SceneDef = {
 const defs: {id: string; title: string; phrase: string; offset?: number; Component: React.FC<SceneProps>}[] = [
   {id: "01", title: "one function", phrase: "Every AI model", Component: Hook},
   {id: "02", title: "the bug", phrase: "Last month, Google DeepMind", Component: TheBug},
-  {id: "03", title: "the silent agent", phrase: "That's only half", Component: SilentAgent},
+  {id: "03", title: "the silent agent", phrase: "That's only half", offset: 0.9, Component: SilentAgent},
   {id: "04", title: "three papers", phrase: "This video breaks down three new papers", Component: Roadmap},
   {id: "05", title: "two questions", phrase: "These two stories are connected", offset: 0.4, Component: TwoQuestions},
   {id: "06", title: "one idea", phrase: "Three papers answer both", Component: OneIdea},
