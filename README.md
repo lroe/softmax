@@ -26,7 +26,7 @@ npm run studio
 - `video/src/lib/` — rough.js sketch primitives, layout kit, meme overlay
 - `video/src/data/words.json` — word-level Whisper alignment used for speech-locked reveals
 - `video/public/audio.wav` — narration
-- `video/public/memes/` — the sixteen full-screen meme cards
+- `video/public/memes/` — the fifteen full-screen meme cards
 
 ## Format
 
@@ -48,7 +48,6 @@ npm run studio
 | Time | Meme | Beat |
 |---|---|---|
 | 0:17 | surprised pikachu | the bug is in every framework |
-| 1:03 | monkey puppet | softmax… or the squeeze? |
 | 3:29 | Bernie once again | gradients that sum to zero |
 | 4:22 | this is fine | loss spikes / slingshots |
 | 5:48 | panik-kalm-panik | confident → loss 0 → gradient 0 |

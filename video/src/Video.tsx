@@ -41,18 +41,6 @@ export const MEMES = [
     ],
   },
   {
-    src: "memes/monkey.png",
-    w: 923,
-    h: 768,
-    start: 63.4,
-    end: 68.6,
-    maxW: 900,
-    maxH: 760,
-    captions: [
-      {x: 0.5, y: 0.115, w: 0.9, text: "softmax ... or the squeeze?", size: 46, color: "#17181e", stroke: false},
-    ],
-  },
-  {
     src: "memes/bernie.png",
     w: 750,
     h: 750,
