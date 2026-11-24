@@ -53,6 +53,18 @@ export const MEMES = [
     ],
   },
   {
+    src: "memes/bernie.png",
+    w: 750,
+    h: 750,
+    start: 209.0,
+    end: 214.2,
+    maxW: 760,
+    maxH: 760,
+    captions: [
+      {x: 0.5, y: 0.94, w: 0.9, text: "for gradients that sum to zero", size: 32},
+    ],
+  },
+  {
     src: "memes/this-is-fine.png",
     w: 1160,
     h: 564,
@@ -87,6 +99,19 @@ export const MEMES = [
     captions: [
       {x: 0.22, y: 0.1, w: 0.36, text: "the tiny error", size: 42},
       {x: 0.8, y: 0.1, w: 0.3, text: "Adam", size: 42},
+    ],
+  },
+  {
+    src: "memes/handshake.png",
+    w: 900,
+    h: 645,
+    start: 462.0,
+    end: 467.2,
+    maxW: 1120,
+    maxH: 800,
+    captions: [
+      {x: 0.2, y: 0.14, w: 0.34, text: "teacher", size: 44},
+      {x: 0.8, y: 0.14, w: 0.34, text: "student", size: 44},
     ],
   },
   {
