@@ -35,9 +35,9 @@ const LossChart: React.FC<{
     <g>
       <SketchLine x1={x} y1={y} x2={x} y2={y + h} start={start - 0.3} dur={0.35} stroke={C.soft} strokeWidth={3} seed={1610} />
       <SketchLine x1={x} y1={y + h} x2={x + w} y2={y + h} start={start - 0.2} dur={0.35} stroke={C.soft} strokeWidth={3} seed={1611} />
-      <Label text="loss" x={x - 26} y={y + 8} size={36} color={C.soft} align="right" start={start + 0.2} font="DejaVu Sans" />
-      <Label text="steps" x={x + w / 2} y={y + h + 44} size={36} color={C.soft} start={start + 0.3} font="DejaVu Sans" />
-      <Label text="0" x={x} y={y + h + 34} size={36} color={C.soft} start={start + 0.3} font="DejaVu Sans" />
+      <Label text="loss" x={x - 26} y={y + 8} size={40} color={C.soft} align="right" start={start + 0.2} font="DejaVu Sans" />
+      <Label text="steps" x={x + w / 2} y={y + h + 44} size={40} color={C.soft} start={start + 0.3} font="DejaVu Sans" />
+      <Label text="0" x={x} y={y + h + 34} size={40} color={C.soft} start={start + 0.3} font="DejaVu Sans" />
       <SketchPath d={flat + drop} start={start} dur={1.5} stroke={C.fg} strokeWidth={4} seed={1612} progress={p} roughness={0.6} />
       {label ? <Label text={label} x={x + w * 0.82} y={y + h * 0.7} size={46} color={C.green} start={labelAt} /> : null}
       <FadeGroup start={spikesAt} fade={0.3}>
@@ -117,7 +117,7 @@ export const MaxShift: React.FC<SceneProps> = ({t0}) => {
             {row.vals.map((v, i) => (
               <WordChip key={i} text={v} x={760 + i * 200} y={row.y} w={150} h={82} start={0.1 + ri * 0.35 + i * 0.06} color={row.c[i]} size={42} mono />
             ))}
-            <Label text={row.label} x={600} y={row.y} size={38} color={C.soft} align="right" start={0.2 + ri * 0.35} />
+            <Label text={row.label} x={600} y={row.y} size={40} color={C.soft} align="right" start={0.2 + ri * 0.35} />
           </g>
         ))}
         <Label text="max-shift" x={960} y={780} size={48} color={C.purple} start={0.9} />
@@ -201,9 +201,9 @@ export const Combine: React.FC<SceneProps> = ({t0}) => {
       </FadeGroup>
 
       <FadeGroup start={wrong - 0.1} fade={0.25}>
-        <Label text="right" x={760} y={250} size={38} color={C.green} start={0} />
+        <Label text="right" x={760} y={250} size={40} color={C.green} start={0} />
         <Label text="0" x={760} y={330} size={64} color={C.red} start={0.1} font="DejaVu Sans Mono" />
-        <Label text="others" x={1160} y={250} size={38} color={C.orange} start={0.2} />
+        <Label text="others" x={1160} y={250} size={40} color={C.orange} start={0.2} />
         <Label text="2×10⁻⁴" x={1160} y={330} size={44} color={C.orange} start={0.3} font="DejaVu Sans Mono" />
         <Label text="1×10⁻⁴" x={1160} y={395} size={44} color={C.orange} start={0.4} font="DejaVu Sans Mono" />
       </FadeGroup>
@@ -227,15 +227,15 @@ export const PaperExample: React.FC<SceneProps> = ({t0}) => {
             <WordChip text={v} x={660 + i * 170} y={300} w={130} h={84} start={0.1 + i * 0.12} color={i === 0 ? C.green : C.soft} size={46} mono />
           </g>
         ))}
-        <Label text="right" x={960} y={195} size={38} color={C.green} start={S("right answer is the first") - 0.05} />
+        <Label text="right" x={960} y={195} size={40} color={C.green} start={S("right answer is the first") - 0.05} />
 
         <FadeGroup start={standard - 0.1} fade={0.2}>
-          <Label text="code" x={620} y={520} size={38} color={C.soft} start={0} />
+          <Label text="code" x={620} y={520} size={40} color={C.soft} start={0} />
           <Label text="loss 0" x={620} y={590} size={46} color={C.red} start={0.1} font="DejaVu Sans Mono" />
           <Label text="grad 0" x={620} y={660} size={46} color={C.red} start={0.2} font="DejaVu Sans Mono" />
         </FadeGroup>
         <FadeGroup start={truth - 0.1} fade={0.2}>
-          <Label text="truth" x={1200} y={520} size={38} color={C.soft} start={0} />
+          <Label text="truth" x={1200} y={520} size={40} color={C.soft} start={0} />
           <Label text="loss 2×10⁻⁸" x={1200} y={590} size={40} color={C.orange} start={0.1} font="DejaVu Sans Mono" />
           <Label text="grad −2×10⁻⁸" x={1200} y={660} size={40} color={C.green} start={0.2} font="DejaVu Sans Mono" />
         </FadeGroup>
@@ -263,10 +263,10 @@ export const Cliff: React.FC<SceneProps> = ({t0}) => {
         {[0, 10, 20, 30, 40].map((v, i) => (
           <g key={v}>
             <SketchLine x1={300 + v * 33} y1={742} x2={300 + v * 33} y2={760} start={0.3 + i * 0.05} dur={0.15} stroke={C.soft} strokeWidth={2.5} seed={1721 + i} />
-            <Label text={`${v}`} x={300 + v * 33} y={792} size={36} color={C.soft} start={0.4 + i * 0.05} font="DejaVu Sans" />
+            <Label text={`${v}`} x={300 + v * 33} y={792} size={40} color={C.soft} start={0.4 + i * 0.05} font="DejaVu Sans" />
           </g>
         ))}
-        <Label text="lead" x={960} y={850} size={36} color={C.soft} start={0.6} font="DejaVu Sans" />
+        <Label text="lead" x={960} y={850} size={40} color={C.soft} start={0.6} font="DejaVu Sans" />
 
         {[
           {v: 5.5, c: C.red, l: "bf16 5.5", p: "In B F sixteen", y: 560},
@@ -297,15 +297,15 @@ export const Adam: React.FC<SceneProps> = ({t0}) => {
           {y: 560, g: 220, step: 60, color: C.orange},
         ].map((row, i) => (
           <g key={i}>
-            <Label text="grad" x={500} y={row.y} size={38} color={C.soft} align="left" start={0.1} />
+            <Label text="grad" x={500} y={row.y} size={40} color={C.soft} align="left" start={0.1} />
             <SketchRect x={630} y={row.y - 22} w={row.g} h={44} start={0.2 + i * 0.2} dur={0.3} stroke={row.color} fill={row.color} strokeWidth={2} radius={5} seed={1740 + i} />
             <Arrow x1={650 + row.g + 12} y1={row.y} x2={650 + row.g + 12 + row.step} y2={row.y} start={0.4 + i * 0.2} stroke={C.green} strokeWidth={3} head={14} />
             <SketchLine x1={650 + row.g + 12 + row.step} y1={row.y - 18} x2={650 + row.g + 12 + row.step} y2={row.y + 18} start={0.55 + i * 0.2} dur={0.15} stroke={C.green} strokeWidth={3} seed={1750 + i} />
-            <Label text="step" x={650 + row.g + 12 + row.step / 2} y={row.y + 60} size={36} color={C.green} start={0.5 + i * 0.2} />
+            <Label text="step" x={650 + row.g + 12 + row.step / 2} y={row.y + 60} size={40} color={C.green} start={0.5 + i * 0.2} />
           </g>
         ))}
-        <Label text="quiet" x={720} y={280} size={38} color={C.soft} start={0.6} />
-        <Label text="loud" x={720} y={510} size={38} color={C.soft} start={0.8} />
+        <Label text="quiet" x={720} y={280} size={40} color={C.soft} start={0.6} />
+        <Label text="loud" x={720} y={510} size={40} color={C.soft} start={0.8} />
       </FadeGroup>
 
       <FadeGroup start={turns - 0.1} end={S("explains the slingshot spikes") - 0.15} fade={0.25}>
@@ -339,19 +339,19 @@ export const Results: React.FC<SceneProps> = ({t0}) => {
         {[88, 92, 96, 100].map((v, i) => (
           <g key={v}>
             <SketchLine x1={412} y1={yFor(v)} x2={420} y2={yFor(v)} start={0.3 + i * 0.05} dur={0.15} stroke={C.soft} strokeWidth={2.5} seed={1772 + i} />
-            <Label text={`${v}`} x={390} y={yFor(v)} size={36} color={C.soft} align="right" start={0.35 + i * 0.05} font="DejaVu Sans" />
+            <Label text={`${v}`} x={390} y={yFor(v)} size={40} color={C.soft} align="right" start={0.35 + i * 0.05} font="DejaVu Sans" />
           </g>
         ))}
-        <Label text="accuracy" x={420} y={265} size={36} color={C.soft} align="left" start={0.4} font="DejaVu Sans" />
+        <Label text="accuracy" x={420} y={265} size={40} color={C.soft} align="left" start={0.4} font="DejaVu Sans" />
         {[{x: 620, n: "bf16"}, {x: 960, n: "fp32"}, {x: 1300, n: "fp64"}].map((g, i) => (
-          <Label key={i} text={g.n} x={g.x} y={790} size={38} color={C.fg} start={S("In B F sixteen") + 0.1 + i * 0.5} font="DejaVu Sans" />
+          <Label key={i} text={g.n} x={g.x} y={790} size={40} color={C.fg} start={S("In B F sixteen") + 0.1 + i * 0.5} font="DejaVu Sans" />
         ))}
         <SketchPath d={`M 620 ${yFor(93.3)} L 960 ${yFor(94.3)} L 1300 ${yFor(100)}`} start={S("In B F sixteen") - 0.1} dur={1.2} stroke={C.red} strokeWidth={4} seed={1780} />
         <SketchPath d={`M 560 ${yFor(100)} L 1360 ${yFor(100)}`} start={S("fixed version reaches 100") - 0.2} dur={1.0} stroke={C.green} strokeWidth={4} seed={1781} />
         {[{x: 620, v: 93.3}, {x: 960, v: 94.3}, {x: 1300, v: 100}].map((p, i) => (
           <g key={i}>
             <SketchCircle x={p.x} y={yFor(p.v)} d={16} start={S("In B F sixteen") + 0.5 + i * 0.5} dur={0.2} stroke={C.red} fill={C.red} seed={1782 + i} />
-            <Label text={`${p.v}`} x={p.x} y={yFor(p.v) + 44} size={36} color={C.red} start={S("In B F sixteen") + 0.6 + i * 0.5} font="DejaVu Sans Mono" />
+            <Label text={`${p.v}`} x={p.x} y={yFor(p.v) + 44} size={40} color={C.red} start={S("In B F sixteen") + 0.6 + i * 0.5} font="DejaVu Sans Mono" />
           </g>
         ))}
       </FadeGroup>
@@ -379,7 +379,7 @@ export const Distill: React.FC<SceneProps> = ({t0}) => {
         <SketchRect x={300} y={340} w={420} h={240} start={0.1} dur={0.4} stroke={C.purple} fill={C.panel} strokeWidth={4} radius={16} seed={1800} />
         <Label text="teacher" x={510} y={460} size={44} color={C.purple} start={0.3} />
         <SketchRect x={1180} y={410} w={260} h={160} start={0.5} dur={0.4} stroke={C.cyan} fill={C.panel} strokeWidth={3.5} radius={14} seed={1801} />
-        <Label text="student" x={1310} y={490} size={36} color={C.cyan} start={0.7} />
+        <Label text="student" x={1310} y={490} size={40} color={C.cyan} start={0.7} />
         <Arrow x1={740} y1={450} x2={1170} y2={450} start={0.8} stroke={C.soft} strokeWidth={3} head={16} />
         {[{x: 1000, v: 78, c: C.green}, {x: 1000, v: 16, c: C.cyan}].map((b, i) => (
           <SketchRect key={i} x={b.x} y={590 + i * 58} w={420 * (b.v / 100)} h={40} start={1.0 + i * 0.1} dur={0.3} stroke={b.c} fill={b.c} strokeWidth={2} radius={5} seed={1810 + i} />
@@ -445,7 +445,7 @@ export const CodeTest: React.FC<SceneProps> = ({t0}) => {
       {["z = logits", "p = softmax(z)", "g = p - onehot", "s = g.sum()", "print(s)"].map((l, i) => (
         <Label key={i} text={l} x={620} y={310 + i * 70} size={42} color={C.green} align="left" font="DejaVu Sans Mono" start={0.2 + i * 0.15} />
       ))}
-      <Label text="fp32" x={1290} y={260} size={36} color={C.soft} start={0.4} />
+      <Label text="fp32" x={1290} y={260} size={40} color={C.soft} start={0.4} />
       <FadeGroup start={S("Run it. The sum comes out") - 0.1} fade={0.2}>
         <Label text="3×10⁻⁸" x={960} y={820} size={96} color={C.red} start={0.1} font="DejaVu Sans Mono" />
       </FadeGroup>
@@ -472,7 +472,7 @@ export const Caveats: React.FC<SceneProps> = ({t0}) => {
       <FadeGroup start={two - 0.1} fade={0.25}>
         {["JAX", "PyTorch", "TensorFlow"].map((w, i) => (
           <g key={w}>
-            <WordChip text={w} x={700 + i * 260} y={360} w={220} h={76} start={0.1 + i * 0.12} color={C.soft} size={38} />
+            <WordChip text={w} x={700 + i * 260} y={360} w={220} h={76} start={0.1 + i * 0.12} color={C.soft} size={40} />
             <SketchLine x1={620 + i * 260} y1={330} x2={780 + i * 260} y2={390} start={0.4 + i * 0.1} dur={0.2} stroke={C.red} strokeWidth={5} seed={1860 + i} />
           </g>
         ))}

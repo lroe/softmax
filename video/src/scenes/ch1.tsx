@@ -216,16 +216,16 @@ export const SilentAgent: React.FC<SceneProps> = ({t0}) => {
       </FadeGroup>
 
       <FadeGroup start={S("beat several frontier models") - 0.2} end={S("half as many tokens") - 0.35} fade={0.35}>
-        <Label text="score" x={1010} y={250} size={36} color={C.soft} start={0} align="left" font="DejaVu Sans" />
+        <Label text="score" x={1010} y={250} size={40} color={C.soft} start={0} align="left" font="DejaVu Sans" />
         <HBar x={1100} y={350} w={470} value={58} start={0.1} color={C.soft} dim labelSize={38} seed={450} />
         <HBar x={1100} y={430} w={470} value={66} start={0.22} color={C.soft} dim labelSize={38} seed={452} />
         <HBar x={1100} y={510} w={470} value={54} start={0.34} color={C.soft} dim labelSize={38} seed={454} />
         <Bracket x={1060} y1={370} y2={570} dir={1} start={0.42} color={C.soft} size={14} />
-        <Label text="frontier" x={1100} y={325} size={36} color={C.soft} start={0.45} font="DejaVu Sans" />
+        <Label text="frontier" x={1100} y={325} size={40} color={C.soft} start={0.45} font="DejaVu Sans" />
         <HBar x={1100} y={620} w={470} value={94} label="silent" start={0.55} color={C.green} valueText="94" labelSize={42} seed={456} />
         <SketchLine x1={1100} y1={700} x2={1570} y2={700} start={0.75} dur={0.3} stroke={C.line} strokeWidth={3} seed={458} />
-        <Label text="0" x={1100} y={734} size={36} color={C.soft} start={0.8} font="DejaVu Sans" />
-        <Label text="100" x={1570} y={734} size={36} color={C.soft} start={0.85} font="DejaVu Sans" />
+        <Label text="0" x={1100} y={734} size={40} color={C.soft} start={0.8} font="DejaVu Sans" />
+        <Label text="100" x={1570} y={734} size={40} color={C.soft} start={0.85} font="DejaVu Sans" />
       </FadeGroup>
 
       <FadeGroup start={S("half as many tokens") - 0.2} fade={0.35}>
@@ -271,7 +271,7 @@ export const Roadmap: React.FC<SceneProps> = ({t0}) => {
           "s = g.sum()",
           "print(s > 1e-7)",
         ].map((line, i) => (
-          <Label key={i} text={line} x={700} y={340 + i * 62} size={38} color={C.green} align="left" font="DejaVu Sans Mono" start={0.2 + i * 0.12} />
+          <Label key={i} text={line} x={700} y={340 + i * 62} size={40} color={C.green} align="left" font="DejaVu Sans Mono" start={0.2 + i * 0.12} />
         ))}
         <Label text="5 lines" x={960} y={740} size={44} color={C.green} start={0.85} />
       </FadeGroup>
@@ -314,8 +314,8 @@ export const TwoQuestions: React.FC<SceneProps> = ({t0}) => {
         ].map((b, i) => (
           <g key={i}>
             <SketchRect x={1230} y={382 + i * 44} w={Math.max(10, 430 * (b.v / 100))} h={28} start={S("turns scores into chances") + 0.5 + i * 0.07} dur={0.3} stroke={b.c} fill={b.c} strokeWidth={2} radius={5} seed={540 + i} />
-            <Label text={`${b.v}%`} x={1680} y={397 + i * 44} size={36} color={b.c} align="left" start={S("turns scores into chances") + 0.7 + i * 0.07} font="DejaVu Sans Mono" />
-            <Label text={b.w} x={1210} y={397 + i * 44} size={36} color={C.soft} align="right" start={S("turns scores into chances") + 0.55 + i * 0.07} />
+            <Label text={`${b.v}%`} x={1680} y={397 + i * 44} size={40} color={b.c} align="left" start={S("turns scores into chances") + 0.7 + i * 0.07} font="DejaVu Sans Mono" />
+            <Label text={b.w} x={1210} y={397 + i * 44} size={40} color={C.soft} align="right" start={S("turns scores into chances") + 0.55 + i * 0.07} />
           </g>
         ))}
         <FadeGroup start={S("picks one word and throws everything else away") - 0.1} fade={0.3}>
@@ -338,7 +338,7 @@ export const TwoQuestions: React.FC<SceneProps> = ({t0}) => {
         ].map((b, i) => (
           <g key={i}>
             <SketchRect x={620} y={470 + i * 78} w={Math.max(10, 520 * (b.v / 100))} h={42} start={q1 - 0.05 + i * 0.06} dur={0.25} stroke={b.c} fill={b.c} strokeWidth={2} radius={5} seed={582 + i} />
-            <Label text={b.w} x={590} y={491 + i * 78} size={38} color={C.soft} align="right" start={q1 + i * 0.06} />
+            <Label text={b.w} x={590} y={491 + i * 78} size={40} color={C.soft} align="right" start={q1 + i * 0.06} />
           </g>
         ))}
         <Label text="sum = 1" x={960} y={850} size={50} color={C.fg} start={q1 + 0.35} />
@@ -352,7 +352,7 @@ export const TwoQuestions: React.FC<SceneProps> = ({t0}) => {
         <VectorStrip x={760} y={570} n={8} cell={54} start={0.1} color={C.cyan} showValues={false} seed={570} />
         <Arrow x1={1200} y1={570} x2={1300} y2={570} start={0.35} stroke={C.cyan} strokeWidth={3.2} head={16} />
         <WordChip text="one" x={1440} y={570} w={180} h={78} start={0.3} color={C.orange} size={46} />
-        <Label text="word" x={1440} y={650} size={38} color={C.soft} start={0.5} />
+        <Label text="word" x={1440} y={650} size={40} color={C.soft} start={0.5} />
       </FadeGroup>
     </Canvas>
   );
@@ -375,10 +375,10 @@ export const OneIdea: React.FC<SceneProps> = ({t0}) => {
         <Gate x={760} y={330} w={400} h={400} start={0.2} color={C.purple} label="softmax" leak={1} leakStart={leak} />
         <Arrow x1={1180} y1={430} x2={1300} y2={430} start={0.75} stroke={C.orange} strokeWidth={3} head={16} />
         {["cat", "a"].map((w, i) => (
-          <WordChip key={i} text={w} x={1400} y={390 + i * 80} w={120} start={0.9 + i * 0.08} color={C.orange} size={38} />
+          <WordChip key={i} text={w} x={1400} y={390 + i * 80} w={120} start={0.9 + i * 0.08} color={C.orange} size={40} />
         ))}
         <Arrow x1={570} y1={470} x2={750} y2={470} start={push - 0.05} stroke={C.orange} strokeWidth={8} head={18} />
-        <Label text="2+3" x={660} y={390} size={36} color={C.orange} start={push + 0.1} />
+        <Label text="2+3" x={660} y={390} size={40} color={C.orange} start={push + 0.1} />
       </FadeGroup>
 
       <FadeGroup start={table + 0.2} end={startZero - 0.05} fade={0.3}>
@@ -387,7 +387,7 @@ export const OneIdea: React.FC<SceneProps> = ({t0}) => {
           <SketchLine key={r} x1={600} y1={340 + r * 95} x2={1320} y2={340 + r * 95} start={0.3 + r * 0.05} dur={0.2} stroke={C.line} strokeWidth={2.4} seed={630 + r} />
         ))}
         {["baseline", "block", "noise", "wrong problem", "random"].map((t, i) => (
-          <Label key={i} text={t} x={630} y={292 + i * 95} size={36} color={C.soft} align="left" start={0.35 + i * 0.05} />
+          <Label key={i} text={t} x={630} y={292 + i * 95} size={40} color={C.soft} align="left" start={0.35 + i * 0.05} />
         ))}
         {["?", "?", "?", "?", "?"].map((t, i) => (
           <Label key={i} text={t} x={1270} y={292 + i * 95} size={44} color={C.orange} start={0.55 + i * 0.06} />

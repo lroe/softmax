@@ -137,7 +137,7 @@ export const LogitsChances: React.FC<SceneProps> = ({t0}) => {
         ].map((b, i) => (
           <g key={i}>
             <SketchRect x={1050} y={490 + i * 90} w={520 * (b.v / 100)} h={56} start={S("ninety percent cat") + i * 0.12} dur={0.35} stroke={b.c} fill={b.c} strokeWidth={2} radius={6} seed={1100 + i} />
-            <Label text={b.l} x={1040} y={518 + i * 90} size={38} color={C.soft} align="right" start={S("ninety percent cat") + i * 0.12} />
+            <Label text={b.l} x={1040} y={518 + i * 90} size={40} color={C.soft} align="right" start={S("ninety percent cat") + i * 0.12} />
             <Label text={`${b.v}%`} x={1600} y={518 + i * 90} size={42} color={b.c} align="left" start={S("ninety percent cat") + 0.15 + i * 0.12} font="DejaVu Sans Mono" />
           </g>
         ))}
@@ -175,7 +175,7 @@ export const Singers: React.FC<SceneProps> = ({t0}) => {
             <Label text={`${v}`} x={cols[i]} y={500} size={96} color={C.fg} start={0.15 + i * 0.1} font="Caveat" />
           </FadeGroup>
           <FadeGroup start={exp - 0.05} end={result - 0.05} fade={0.2}>
-            <Label text={["e³", "e¹", "e⁰"][i]} x={cols[i] - 48} y={452} size={38} color={C.soft} start={0.05 + i * 0.08} />
+            <Label text={["e³", "e¹", "e⁰"][i]} x={cols[i] - 48} y={452} size={40} color={C.soft} start={0.05 + i * 0.08} />
             <Label text={["20.1", "2.7", "1"][i]} x={cols[i]} y={515} size={70} color={C.orange} start={0.15 + i * 0.08} font="Caveat" />
           </FadeGroup>
           <FadeGroup start={result - 0.05} end={widen - 0.05} fade={0.25}>
@@ -199,7 +199,7 @@ export const Singers: React.FC<SceneProps> = ({t0}) => {
           <SketchRect key={i} x={cols[i] - 70} y={860 - v * 2.4} w={140} h={Math.max(4, v * 2.4)} start={i * 0.08} dur={0.5} stroke={[C.green, C.cyan, C.soft][i]} fill={[C.green, C.cyan, C.soft][i]} strokeWidth={2} radius={6} seed={1190 + i} opacity={0.9} />
         ))}
         <SketchLine x1={400} y1={860} x2={1520} y2={860} start={0} dur={0.2} stroke={C.line} strokeWidth={4} seed={1200} />
-        <Label text="winner" x={580} y={912} size={38} color={C.green} start={win - 0.05} />
+        <Label text="winner" x={580} y={912} size={40} color={C.green} start={win - 0.05} />
       </FadeGroup>
     </Canvas>
   );
@@ -253,8 +253,8 @@ export const LossGradient: React.FC<SceneProps> = ({t0}) => {
         ))}
         <Label text="p − 1" x={700} y={800} size={54} color={C.red} start={formula + 0.1} font="DejaVu Sans Mono" />
         <Label text="p" x={1150} y={800} size={54} color={C.green} start={formula + 0.25} font="DejaVu Sans Mono" />
-        <Label text="right word" x={700} y={860} size={36} color={C.soft} start={formula + 0.35} />
-        <Label text="others" x={1150} y={860} size={36} color={C.soft} start={formula + 0.45} />
+        <Label text="right word" x={700} y={860} size={40} color={C.soft} start={formula + 0.35} />
+        <Label text="others" x={1150} y={860} size={40} color={C.soft} start={formula + 0.45} />
       </FadeGroup>
     </Canvas>
   );
