@@ -1,0 +1,7 @@
+node_modules/
+video/node_modules/
+video/out/
+video/.cache/
+qa-frames/
+*.log
+.DS_Store
