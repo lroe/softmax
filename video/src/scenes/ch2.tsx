@@ -115,8 +115,8 @@ export const LogitsChances: React.FC<SceneProps> = ({t0}) => {
             <Label text={row.v} x={1020} y={430 + i * 76} size={46} color={i === 0 ? C.green : C.soft} align="left" start={S("Step two. The model scores every word") + 0.35 + i * 0.1} font="DejaVu Sans Mono" />
           </g>
         ))}
-        <Bracket x={1180} y1={385} y2={690} dir={1} start={S("Fifty thousand words") - 0.15} color={C.orange} size={16} />
-        <Label text="50,000" x={1220} y={338} size={56} color={C.orange} align="left" start={S("Fifty thousand words") - 0.05} />
+        <Bracket x={1150} y1={400} y2={770} dir={-1} start={S("Fifty thousand words") - 0.15} color={C.orange} size={16} />
+        <Label text="50,000" x={1150} y={355} size={48} color={C.orange} align="center" start={S("Fifty thousand words") - 0.05} />
         <Label text="logits" x={900} y={850} size={54} color={C.orange} start={S("Those scores are called logits") - 0.05} />
         <Underline x={900} y={896} w={170} start={S("Those scores are called logits") + 0.1} color={C.orange} width={3} />
       </FadeGroup>
