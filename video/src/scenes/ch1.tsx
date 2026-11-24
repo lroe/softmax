@@ -210,9 +210,12 @@ export const SilentAgent: React.FC<SceneProps> = ({t0}) => {
         <HBar x={1100} y={350} w={470} value={58} start={0.1} color={C.soft} dim labelSize={38} seed={450} />
         <HBar x={1100} y={430} w={470} value={66} start={0.22} color={C.soft} dim labelSize={38} seed={452} />
         <HBar x={1100} y={510} w={470} value={54} start={0.34} color={C.soft} dim labelSize={38} seed={454} />
-        <Bracket x={1060} y1={370} y2={570} dir={-1} start={0.42} color={C.soft} size={14} />
+        <Bracket x={1060} y1={370} y2={570} dir={1} start={0.42} color={C.soft} size={14} />
         <Label text="frontier" x={1100} y={325} size={36} color={C.soft} start={0.45} font="DejaVu Sans" />
         <HBar x={1100} y={620} w={470} value={94} label="silent" start={0.55} color={C.green} valueText="94" labelSize={42} seed={456} />
+        <SketchLine x1={1100} y1={700} x2={1570} y2={700} start={0.75} dur={0.3} stroke={C.line} strokeWidth={3} seed={458} />
+        <Label text="0" x={1100} y={734} size={36} color={C.soft} start={0.8} font="DejaVu Sans" />
+        <Label text="100" x={1570} y={734} size={36} color={C.soft} start={0.85} font="DejaVu Sans" />
       </FadeGroup>
 
       <FadeGroup start={S("half as many tokens") - 0.2} fade={0.35}>
